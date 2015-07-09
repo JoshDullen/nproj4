@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D0210A8D-3904-4A34-BBF4-4A49CA7C325E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Free.Ports.Proj4</RootNamespace>
+    <AssemblyName>Free.Ports.Proj4</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+    <RunPostBuildEvent>OnOutputUpdated</RunPostBuildEvent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Approximation\PW_COEF.cs" />
+    <Compile Include="FactorsDeriv\DERIVS.cs" />
+    <Compile Include="FactorsDeriv\FACTORS.cs" />
+    <Compile Include="FactorsDeriv\IFactors.cs" />
+    <Compile Include="Geodesic\GEOD.cs" />
+    <Compile Include="Geodesic\geodesic.cs" />
+    <Compile Include="Geodesic\geod_geodesic.cs" />
+    <Compile Include="Geodesic\geod_geodesicline.cs" />
+    <Compile Include="Geodesic\geod_interface.cs" />
+    <Compile Include="Geodesic\geod_polygon.cs" />
+    <Compile Include="Gridshift\CTABLE.cs" />
+    <Compile Include="Gridshift\ILP.cs" />
+    <Compile Include="Gridshift\pj_gc_reader.cs" />
+    <Compile Include="Gridshift\pj_gridcatalog.cs" />
+    <Compile Include="Gridshift\PJ_Region.cs" />
+    <Compile Include="LibcStuff\Complex.cs" />
+    <Compile Include="Lists\pj_datums.cs" />
+    <Compile Include="Lists\pj_units.cs" />
+    <Compile Include="Misc\aasincos.cs" />
+    <Compile Include="Misc\adjlon.cs" />
+    <Compile Include="Approximation\bch2bps.cs" />
+    <Compile Include="Approximation\bchgen.cs" />
+    <Compile Include="Approximation\biveval.cs" />
+    <Compile Include="Misc\dmstor.cs" />
+    <Compile Include="Approximation\emess.cs" />
+    <Compile Include="geocent.cs" />
+    <Compile Include="LibcStuff\hypot.cs" />
+    <Compile Include="Misc\pj_auth.cs" />
+    <Compile Include="FactorsDeriv\pj_deriv.cs" />
+    <Compile Include="Misc\pj_gauss.cs" />
+    <Compile Include="Misc\pj_mdist.cs" />
+    <Compile Include="Misc\pj_phi2.cs" />
+    <Compile Include="Misc\pj_tsfn.cs" />
+    <Compile Include="Projections\pj_calcofi.cs" />
+    <Compile Include="Projections\pj_qsc.cs" />
+    <Compile Include="WKT\WKTNode.cs" />
+    <Compile Include="Gridshift\pj_apply_vgridshift.cs" />
+    <Compile Include="pj_ctx.cs" />
+    <Compile Include="FactorsDeriv\pj_factors.cs" />
+    <Compile Include="Gridshift\pj_gridlist.cs" />
+    <Compile Include="pj_init.cs" />
+    <Compile Include="pj_log.cs" />
+    <Compile Include="pj_utils.cs" />
+    <Compile Include="Misc\pj_zpoly1.cs" />
+    <Compile Include="Gridshift\nad_cvt.cs" />
+    <Compile Include="Gridshift\nad_init.cs" />
+    <Compile Include="Gridshift\nad_intr.cs" />
+    <Compile Include="Approximation\gen_cheb.cs" />
+    <Compile Include="Approximation\mk_cheby.cs" />
+    <Compile Include="Lists\pj_ellps.cs" />
+    <Compile Include="Lists\pj_list.cs" />
+    <Compile Include="Misc\pj_mlfn.cs" />
+    <Compile Include="Misc\pj_msfn.cs" />
+    <Compile Include="Misc\pj_param.cs" />
+    <Compile Include="Geodesic\geod_set.cs" />
+    <Compile Include="Gridshift\pj_apply_gridshift.cs" />
+    <Compile Include="pj_datum_set.cs" />
+    <Compile Include="pj_ell_set.cs" />
+    <Compile Include="pj_fwd.cs" />
+    <Compile Include="Gridshift\pj_gridinfo.cs" />
+    <Compile Include="pj_inv.cs" />
+    <Compile Include="pj_open_lib.cs" />
+    <Compile Include="pj_transform.cs" />
+    <Compile Include="Projections\pj_airy.cs" />
+    <Compile Include="Misc\pj_qsfn.cs" />
+    <Compile Include="pj_release.cs" />
+    <Compile Include="Misc\pj_strerrno.cs" />
+    <Compile Include="Projections\pj_aea.cs" />
+    <Compile Include="Projections\pj_aeqd.cs" />
+    <Compile Include="Projections\pj_aitoff.cs" />
+    <Compile Include="Projections\pj_august.cs" />
+    <Compile Include="Projections\pj_bacon.cs" />
+    <Compile Include="Projections\pj_bipc.cs" />
+    <Compile Include="Projections\pj_boggs.cs" />
+    <Compile Include="Projections\pj_bonne.cs" />
+    <Compile Include="Projections\pj_cass.cs" />
+    <Compile Include="Projections\pj_cc.cs" />
+    <Compile Include="Projections\pj_cea.cs" />
+    <Compile Include="Projections\pj_healpix.cs" />
+    <Compile Include="Projections\pj_igh.cs" />
+    <Compile Include="Projections\pj_isea.cs" />
+    <Compile Include="Projections\pj_latlong_deg.cs" />
+    <Compile Include="Approximation\Tseries.cs" />
+    <Compile Include="WKT\WKTParser.cs" />
+    <None Include="PROJ_LIB\BETA2007.gsb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Compile Include="Projections\pj_chamb.cs" />
+    <Compile Include="Projections\pj_crast.cs" />
+    <Compile Include="Projections\pj_denoy.cs" />
+    <Compile Include="Projections\pj_eck1.cs" />
+    <Compile Include="Projections\pj_eck2.cs" />
+    <Compile Include="Projections\pj_eck3.cs" />
+    <Compile Include="Projections\pj_eck4.cs" />
+    <Compile Include="Projections\pj_eck5.cs" />
+    <Compile Include="Projections\pj_eqc.cs" />
+    <Compile Include="Projections\pj_eqdc.cs" />
+    <Compile Include="Projections\pj_etmerc.cs" />
+    <Compile Include="Projections\pj_fahey.cs" />
+    <Compile Include="Projections\pj_fouc_s.cs" />
+    <Compile Include="Projections\pj_ftmerc.cs" />
+    <Compile Include="Projections\pj_gall.cs" />
+    <Compile Include="Projections\pj_geocent.cs" />
+    <Compile Include="Projections\pj_geos.cs" />
+    <Compile Include="Projections\pj_gins8.cs" />
+    <Compile Include="Projections\pj_gnom.cs" />
+    <Compile Include="Projections\pj_gn_sinu.cs" />
+    <Compile Include="Projections\pj_goode.cs" />
+    <Compile Include="Projections\pj_gstmerc.cs" />
+    <Compile Include="Projections\pj_hammer.cs" />
+    <Compile Include="Projections\pj_hatano.cs" />
+    <Compile Include="Projections\pj_imw_p.cs" />
+    <Compile Include="Projections\pj_krovak.cs" />
+    <Compile Include="Projections\pj_ktmerc.cs" />
+    <Compile Include="Projections\pj_labrd.cs" />
+    <Compile Include="Projections\pj_laea.cs" />
+    <Compile Include="Projections\pj_lagrng.cs" />
+    <Compile Include="Projections\pj_larr.cs" />
+    <Compile Include="Projections\pj_lask.cs" />
+    <Compile Include="Projections\pj_latlong.cs" />
+    <Compile Include="Projections\pj_lcc.cs" />
+    <Compile Include="Projections\pj_lcca.cs" />
+    <Compile Include="Projections\pj_loxim.cs" />
+    <Compile Include="Projections\pj_lsat.cs" />
+    <Compile Include="Projections\pj_mbtfpp.cs" />
+    <Compile Include="Projections\pj_mbtfpq.cs" />
+    <Compile Include="Projections\pj_mbt_fps.cs" />
+    <Compile Include="Projections\pj_merc.cs" />
+    <Compile Include="Projections\pj_mill.cs" />
+    <Compile Include="Projections\pj_collg.cs" />
+    <Compile Include="Projections\pj_mod_ster.cs" />
+    <Compile Include="Projections\pj_moll.cs" />
+    <Compile Include="Projections\pj_natearth.cs" />
+    <Compile Include="Projections\pj_nell.cs" />
+    <Compile Include="Projections\pj_nell_h.cs" />
+    <Compile Include="Projections\pj_nicol.cs" />
+    <Compile Include="Projections\pj_nsper.cs" />
+    <Compile Include="Projections\pj_nzmg.cs" />
+    <Compile Include="Projections\pj_ob_tran.cs" />
+    <Compile Include="Projections\pj_ocea.cs" />
+    <Compile Include="Projections\pj_oea.cs" />
+    <Compile Include="Projections\pj_omerc.cs" />
+    <Compile Include="Projections\pj_ortho.cs" />
+    <Compile Include="Projections\pj_poly.cs" />
+    <Compile Include="Projections\pj_putp2.cs" />
+    <Compile Include="Projections\pj_putp3.cs" />
+    <Compile Include="Projections\pj_putp4p.cs" />
+    <Compile Include="Projections\pj_putp5.cs" />
+    <Compile Include="Projections\pj_putp6.cs" />
+    <Compile Include="Projections\pj_robin.cs" />
+    <Compile Include="Projections\pj_rouss.cs" />
+    <Compile Include="Projections\pj_rpoly.cs" />
+    <Compile Include="Projections\pj_sconics.cs" />
+    <Compile Include="Projections\pj_somerc.cs" />
+    <Compile Include="Projections\pj_stere.cs" />
+    <Compile Include="Projections\pj_sterea.cs" />
+    <Compile Include="Projections\pj_sts.cs" />
+    <Compile Include="Projections\pj_tcc.cs" />
+    <Compile Include="Projections\pj_tcea.cs" />
+    <Compile Include="Projections\pj_tmerc.cs" />
+    <Compile Include="Projections\pj_tpeqd.cs" />
+    <Compile Include="Projections\pj_urm5.cs" />
+    <Compile Include="Projections\pj_urmfps.cs" />
+    <Compile Include="Projections\pj_vandg.cs" />
+    <Compile Include="Projections\pj_vandg2.cs" />
+    <Compile Include="Projections\pj_vandg4.cs" />
+    <Compile Include="Projections\pj_wag2.cs" />
+    <Compile Include="Projections\pj_wag3.cs" />
+    <Compile Include="Projections\pj_wag7.cs" />
+    <Compile Include="Projections\pj_wink1.cs" />
+    <Compile Include="Projections\pj_wink2.cs" />
+    <Compile Include="projects.cs" />
+    <Compile Include="proj_api.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Approximation\p_series.cs" />
+    <Compile Include="LibcStuff\strerror.cs" />
+    <Compile Include="LibcStuff\strtod.cs" />
+    <Compile Include="LibcStuff\strtol.cs" />
+    <Compile Include="Misc\rtodms.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PROJ_LIB\alaska">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\CH">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\conus">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\epsg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\epsg-deprecated">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\esri">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\esri.extra">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\FL">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\GL27">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\hawaii">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\IGNF">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\MD">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\nad27">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\nad83">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\ntf_r93.gsb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\ntv1_can.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\null">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\nzgd2kgrid0005.gsb">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\other.extra">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\proj_def.dat">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\prvi">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\README">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\README.GRD">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\stgeorge">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\stlrnc">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\stpaul">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\TN">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\WI">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\WO">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="PROJ_LIB\world">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="PROJ_LIB\nad.lst">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
